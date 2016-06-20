@@ -12,3 +12,5 @@ Comes with 2 directories to mount host volumes.
 
 * /php-apps
 * /python-apps
+
+Python 3.5 might be installed.
