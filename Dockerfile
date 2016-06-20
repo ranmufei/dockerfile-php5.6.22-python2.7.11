@@ -18,8 +18,6 @@ RUN python2.7 garb.py
 RUN mkdir /php-apps
 RUN mkdir /python-apps
 
-ADD . /personal
-WORKDIR /personal
 
 RUN pwd
 RUN /usr/local/bin/easy_install-2.7 pip
