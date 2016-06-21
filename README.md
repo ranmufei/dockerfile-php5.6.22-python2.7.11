@@ -1,7 +1,9 @@
 # dockerfile-php5.6.22-python2.7.11
 
 Dockerfile to construct container to run PHP scripts for PHP stacks designed to run through php-fpm dispatched 
-through Nginx.  Also contains Python2.7 equiped with pip, pythongit (for mapping storage against active branch),
+through Nginx.  
+
+Also contains Python2.7 equiped with pip, pythongit (for mapping storage against active branch), boto
 and fabric.
 
 Extra packages include rsync for copying php into DOCUMENT_ROOT in deployment.
@@ -14,3 +16,11 @@ Comes with 2 directories to mount host volumes.
 * /python-apps
 
 Python 3.5 might be installed.
+
+## Simple Use
+
+docker run -t -i --name some-test-container fogcitymarathoner/dockerfile-php5.6.22-python2.7.11:latest /bin/bash
+
+Dont forget to give container a name and delete it.
+
+docker rm some-test-container
