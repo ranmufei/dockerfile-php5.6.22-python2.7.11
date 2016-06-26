@@ -6,6 +6,11 @@ ENV TERM=xterm
 RUN apt-get update
 RUN apt-get -y install php5 wget xz-utils build-essential openssl libssl-dev rsync
 
+# install mysql client and mysqldump
+
+RUN apk add --update mysql-client && rm -rf /var/cache/apk/*
+RUN apk add --update bash && rm -rf /var/cache/apk/*
+
 # install easy_install then pip
 RUN wget https://bootstrap.pypa.io/ez_setup.py -O - > garb.py
 RUN python2.7 garb.py
