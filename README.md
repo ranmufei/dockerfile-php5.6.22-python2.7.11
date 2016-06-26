@@ -6,6 +6,8 @@ through Nginx.
 Also contains Python2.7 equiped with pip, pythongit (for mapping storage against active branch), boto
 and fabric.
 
+MYSql DB management see https://github.com/iwd-sys/mysqldump for passing environment variables.
+
 Extra packages include rsync for copying php into DOCUMENT_ROOT in deployment.
 
 Good base image for current Python 2.7 development, production, and maintenence scripts
@@ -14,6 +16,7 @@ Comes with 2 directories to mount host volumes.
 
 * /php-apps
 * /python-apps
+* /sql
 
 Python 3.5 might be installed.
 
