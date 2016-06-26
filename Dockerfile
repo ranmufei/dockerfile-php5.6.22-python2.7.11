@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED 1
 ENV TERM=xterm
 
 RUN apt-get update
-RUN apt-get -y install php5 wget xz-utils build-essential openssl libssl-dev rsync
+RUN apt-get -y install php5 wget xz-utils build-essential openssl libssl-dev rsync apk
 
 # install mysql client and mysqldump
 
