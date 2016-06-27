@@ -27,3 +27,12 @@ docker run -t -i --name some-test-container fogcitymarathoner/dockerfile-php5.6.
 Dont forget to give container a name and delete it.
 
 docker rm some-test-container
+
+## Use MySQL Client
+
+  116  export MYSQL_PORT_3306_TCP_ADDR=54.213.226.74
+  117  export MYSQL_PORT_3306_TCP_PORT=3360
+  118  export MYSQL_ENV_MYSQL_ROOT_PASSWORD=secret
+
+  124  docker run -it --link ecs-dbs-5-mysql-c088c2bdcdcf88c8ca01:mysql --rm  fogcitymarathoner/dockerfile-php5.6.22-python2.7.11  sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
+
