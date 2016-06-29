@@ -28,9 +28,9 @@ Dont forget to give container a name and delete it.
 
 docker rm some-test-container
 
-## Use MySQL Client
-k	
+## Use MySQL Client On MySQL Cluster
 ~~~~
+  
   export MYSQL_PORT_3306_TCP_ADDR=54.213.226.74
   export MYSQL_PORT_3306_TCP_PORT=3360
   export MYSQL_ENV_MYSQL_ROOT_PASSWORD=secret
