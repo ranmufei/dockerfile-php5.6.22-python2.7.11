@@ -22,6 +22,6 @@ RUN mkdir /php-apps
 RUN mkdir /python-apps
 RUN mkdir /sql
 RUN mkdir /backups
-
+RUN rm requirements.txt garb.py setuptools-24.0.0.zip
 # check php version
 RUN php -v
