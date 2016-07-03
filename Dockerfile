@@ -20,6 +20,8 @@ RUN /usr/local/bin/pip install -r ./requirements.txt
 # a couple of mount points to link volumes
 RUN mkdir /php-apps
 RUN mkdir /python-apps
+RUN mkdir /sql
+RUN mkdir /backups
 
 # check php version
 RUN php -v
