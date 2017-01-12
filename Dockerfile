@@ -3,6 +3,10 @@ FROM python:2.7.11
 ENV PYTHONUNBUFFERED 1
 ENV TERM=xterm
 
+RUN add-apt-repository ppa:ondrej/php5-5.6
+RUN apt-get update
+RUN apt-get install python-software-properties
+
 RUN apt-get update
 RUN apt-get -y install php5 wget xz-utils build-essential openssl libssl-dev rsync mysql-client vim
 
