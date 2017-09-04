@@ -21,6 +21,9 @@ RUN /usr/local/bin/easy_install-2.7 pip
 ADD requirements.txt .
 RUN /usr/local/bin/pip install -r ./requirements.txt
 
+ADD run.sh .
+
+
 # a couple of mount points to link volumes
 RUN mkdir /php-apps
 RUN mkdir /python-apps
@@ -29,3 +32,4 @@ RUN mkdir /backups
 RUN rm requirements.txt garb.py setuptools-24.0.0.zip
 # check php version
 RUN php -v
+CMD /run.sh
